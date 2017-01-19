@@ -1,0 +1,8 @@
+:::Jar already downloaded, launching jetty server...:::
+:::Starting jetty server...:::
+:::Making Request to Service: http://localhost:8080/sikuli/api/wait POST: {"jPattern":{"imagePath":"D:\\Sashuteak\\Test_App\\Test_App\\Test_App\\bin\\Debug\\Images\\search.png","offset_x":0,"offset_y":0,"similar":0.7},"timeout":15.0}:::
+:::{"result":"PASS","message":"Pattern Found"}:::
+:::Result: PASS Message: Pattern Found Stacktrace: :::
+:::Making Request to Service: http://localhost:8080/sikuli/api/type POST: {"jPattern":{"imagePath":"D:\\Sashuteak\\Test_App\\Test_App\\Test_App\\bin\\Debug\\Images\\search.png","offset_x":0,"offset_y":0,"similar":0.7},"jKeyModifier":"NONE","text":"Vasy Pupkin"}:::
+:::{"result":"PASS","message":"Pattern Typed in"}:::
+:::Result: PASS Message: Pattern Typed in Stacktrace: :::

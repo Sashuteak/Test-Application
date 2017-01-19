@@ -1,0 +1,5 @@
+﻿/html/body/header/div[2]/nav/ul/li[1]/a
+/html/body/header/div[2]/nav/ul/li[2]/a
+/html/body/header/div[2]/nav/ul/li[3]/a
+/html/body/header/div[2]/nav/ul/li[4]/a
+/html/body/header/div[2]/nav/ul/li[6]/a

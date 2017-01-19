@@ -1,0 +1,6 @@
+﻿/html/body/div[2]/main/div/section[3]/div/div[2]/article[1]/header/aside/div[3]/button
+/html/body/div[2]/main/div/section[3]/div/div[2]/article[2]/header/aside/div[3]/button
+/html/body/div[2]/main/div/section[3]/div/div[2]/article[3]/header/aside/div[3]/button
+/html/body/div[2]/main/div/section[3]/div/div[2]/article[4]/header/aside/div[3]/button
+/html/body/div[2]/main/div/section[3]/div/div[2]/article[5]/header/aside/div[3]/button
+/html/body/div[2]/main/div/section[3]/div/div[2]/article[6]/header/aside/div[3]/button

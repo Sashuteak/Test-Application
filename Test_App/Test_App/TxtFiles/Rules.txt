@@ -1,0 +1,8 @@
+﻿//*[@id="add_offer_block2"]/fieldset/div/div[1]/div[1]/div[1]/label
+//*[@id="add_offer_block2"]/fieldset/div/div[1]/div[2]/div[1]/label
+//*[@id="add_offer_block2"]/fieldset/div/div[1]/div[1]/div[2]/label
+//*[@id="add_offer_block2"]/fieldset/div/div[1]/div[2]/div[2]/label
+//*[@id="add_offer_block2"]/fieldset/div/div[1]/div[1]/div[3]/label
+//*[@id="add_offer_block2"]/fieldset/div/div[1]/div[2]/div[3]/label
+//*[@id="add_offer_block2"]/fieldset/div/div[1]/div[1]/div[4]/label
+//*[@id="add_offer_block2"]/fieldset/div/div[1]/div[2]/div[4]/label

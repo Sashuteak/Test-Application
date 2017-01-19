@@ -1,0 +1,6 @@
+:::Making Request to Service: http://localhost:8080/sikuli/api/wait POST: {"jPattern":{"imagePath":"D:\\Sashuteak\\Test_App\\Test_App\\Test_App\\bin\\Debug\\AndroidImages\\filter.png","offset_x":0,"offset_y":0,"similar":0.7},"timeout":15.0}:::
+:::{"result":"PASS","message":"Pattern Found"}:::
+:::Result: PASS Message: Pattern Found Stacktrace: :::
+:::Making Request to Service: http://localhost:8080/sikuli/api/click POST: {"jPattern":{"imagePath":"D:\\Sashuteak\\Test_App\\Test_App\\Test_App\\bin\\Debug\\AndroidImages\\filter.png","offset_x":0,"offset_y":0,"similar":0.7},"jKeyModifier":"NONE"}:::
+:::{"result":"PASS","message":"Pattern Clicked"}:::
+:::Result: PASS Message: Pattern Clicked Stacktrace: :::

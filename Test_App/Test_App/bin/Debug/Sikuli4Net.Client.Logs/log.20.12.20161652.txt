@@ -1,0 +1,51 @@
+:::Jar already downloaded, launching jetty server...:::
+:::Starting jetty server...:::
+:::Making Request to Service: http://localhost:8080/sikuli/api/wait POST: {"jPattern":{"imagePath":"D:\\Sashuteak\\Test_App\\Test_App\\Test_App\\bin\\Debug\\AndroidImages\\fan_002.png","offset_x":0,"offset_y":0,"similar":0.7},"timeout":30.0}:::
+:::{"result":"PASS","message":"Pattern Found"}:::
+:::Result: PASS Message: Pattern Found Stacktrace: :::
+:::Making Request to Service: http://localhost:8080/sikuli/api/click POST: {"jPattern":{"imagePath":"D:\\Sashuteak\\Test_App\\Test_App\\Test_App\\bin\\Debug\\AndroidImages\\fan_002.png","offset_x":0,"offset_y":0,"similar":0.7},"jKeyModifier":"NONE"}:::
+:::{"result":"PASS","message":"Pattern Clicked"}:::
+:::Result: PASS Message: Pattern Clicked Stacktrace: :::
+:::Jar already downloaded, launching jetty server...:::
+:::Starting jetty server...:::
+:::Making Request to Service: http://localhost:8080/sikuli/api/wait POST: {"jPattern":{"imagePath":"D:\\Sashuteak\\Test_App\\Test_App\\Test_App\\bin\\Debug\\AndroidImages\\fan_002.png","offset_x":0,"offset_y":0,"similar":0.7},"timeout":30.0}:::
+:::{"result":"PASS","message":"Pattern Found"}:::
+:::Result: PASS Message: Pattern Found Stacktrace: :::
+:::Making Request to Service: http://localhost:8080/sikuli/api/click POST: {"jPattern":{"imagePath":"D:\\Sashuteak\\Test_App\\Test_App\\Test_App\\bin\\Debug\\AndroidImages\\fan_002.png","offset_x":0,"offset_y":0,"similar":0.7},"jKeyModifier":"NONE"}:::
+:::{"result":"PASS","message":"Pattern Clicked"}:::
+:::Result: PASS Message: Pattern Clicked Stacktrace: :::
+:::Jar already downloaded, launching jetty server...:::
+:::Starting jetty server...:::
+:::Making Request to Service: http://localhost:8080/sikuli/api/wait POST: {"jPattern":{"imagePath":"D:\\Sashuteak\\Test_App\\Test_App\\Test_App\\bin\\Debug\\AndroidImages\\fan_002.png","offset_x":0,"offset_y":0,"similar":0.7},"timeout":30.0}:::
+:::{"result":"PASS","message":"Pattern Found"}:::
+:::Result: PASS Message: Pattern Found Stacktrace: :::
+:::Making Request to Service: http://localhost:8080/sikuli/api/click POST: {"jPattern":{"imagePath":"D:\\Sashuteak\\Test_App\\Test_App\\Test_App\\bin\\Debug\\AndroidImages\\fan_002.png","offset_x":0,"offset_y":0,"similar":0.7},"jKeyModifier":"NONE"}:::
+:::{"result":"PASS","message":"Pattern Clicked"}:::
+:::Result: PASS Message: Pattern Clicked Stacktrace: :::
+:::Making Request to Service: http://localhost:8080/sikuli/api/wait POST: {"jPattern":{"imagePath":"D:\\Sashuteak\\Test_App\\Test_App\\Test_App\\bin\\Debug\\AndroidImages\\cardfield_002.png","offset_x":0,"offset_y":0,"similar":0.7},"timeout":30.0}:::
+:::{"result":"PASS","message":"Pattern Found"}:::
+:::Result: PASS Message: Pattern Found Stacktrace: :::
+:::Making Request to Service: http://localhost:8080/sikuli/api/type POST: {"jPattern":{"imagePath":"D:\\Sashuteak\\Test_App\\Test_App\\Test_App\\bin\\Debug\\AndroidImages\\cardfield_002.png","offset_x":0,"offset_y":0,"similar":0.7},"jKeyModifier":"NONE","text":"5457 0822 3709 2727"}:::
+:::{"result":"PASS","message":"Pattern Typed in"}:::
+:::Result: PASS Message: Pattern Typed in Stacktrace: :::
+:::Making Request to Service: http://localhost:8080/sikuli/api/wait POST: {"jPattern":{"imagePath":"D:\\Sashuteak\\Test_App\\Test_App\\Test_App\\bin\\Debug\\AndroidImages\\date_002.png","offset_x":0,"offset_y":0,"similar":0.7},"timeout":30.0}:::
+:::{"result":"PASS","message":"Pattern Found"}:::
+:::Result: PASS Message: Pattern Found Stacktrace: :::
+:::Making Request to Service: http://localhost:8080/sikuli/api/type POST: {"jPattern":{"imagePath":"D:\\Sashuteak\\Test_App\\Test_App\\Test_App\\bin\\Debug\\AndroidImages\\date_002.png","offset_x":0,"offset_y":0,"similar":0.7},"jKeyModifier":"NONE","text":"0720"}:::
+:::{"result":"PASS","message":"Pattern Typed in"}:::
+:::Result: PASS Message: Pattern Typed in Stacktrace: :::
+:::Making Request to Service: http://localhost:8080/sikuli/api/wait POST: {"jPattern":{"imagePath":"D:\\Sashuteak\\Test_App\\Test_App\\Test_App\\bin\\Debug\\AndroidImages\\crv_002.png","offset_x":0,"offset_y":0,"similar":0.7},"timeout":30.0}:::
+:::{"result":"PASS","message":"Pattern Found"}:::
+:::Result: PASS Message: Pattern Found Stacktrace: :::
+:::Making Request to Service: http://localhost:8080/sikuli/api/type POST: {"jPattern":{"imagePath":"D:\\Sashuteak\\Test_App\\Test_App\\Test_App\\bin\\Debug\\AndroidImages\\crv_002.png","offset_x":0,"offset_y":0,"similar":0.7},"jKeyModifier":"NONE","text":"474"}:::
+:::{"result":"PASS","message":"Pattern Typed in"}:::
+:::Result: PASS Message: Pattern Typed in Stacktrace: :::
+:::Making Request to Service: http://localhost:8080/sikuli/api/wait POST: {"jPattern":{"imagePath":"D:\\Sashuteak\\Test_App\\Test_App\\Test_App\\bin\\Debug\\AndroidImages\\submit.png","offset_x":0,"offset_y":0,"similar":0.7},"timeout":30.0}:::
+:::{"result":"PASS","message":"Pattern Found"}:::
+:::Result: PASS Message: Pattern Found Stacktrace: :::
+:::Making Request to Service: http://localhost:8080/sikuli/api/click POST: {"jPattern":{"imagePath":"D:\\Sashuteak\\Test_App\\Test_App\\Test_App\\bin\\Debug\\AndroidImages\\submit.png","offset_x":0,"offset_y":0,"similar":0.7},"jKeyModifier":"NONE"}:::
+:::{"result":"PASS","message":"Pattern Clicked"}:::
+:::Result: PASS Message: Pattern Clicked Stacktrace: :::
+:::Making Request to Service: http://localhost:8080/sikuli/api/exists POST: {"jPattern":{"imagePath":"D:\\Sashuteak\\Test_App\\Test_App\\Test_App\\bin\\Debug\\AndroidImages\\assert.png","offset_x":0,"offset_y":0,"similar":0.7},"timeout":10.0,"patternExists":false,"jResult":null}:::
+:::{"jResult":{"result":"PASS","message":"Pattern does not Exist"},"patternExists":false,"jPattern":{"similar":0.699999988079071,"imagePath":"D:\\Sashuteak\\Test_App\\Test_App\\Test_App\\bin\\Debug\\AndroidImages\\assert.png","offset_x":0,"offset_y":0},"timeout":10}:::
+:::Result: PASS Message: Pattern does not Exist Stacktrace: :::
