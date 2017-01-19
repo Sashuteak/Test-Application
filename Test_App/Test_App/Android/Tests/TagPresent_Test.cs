@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Appium.Android;
 using Test_App.Android.Pages;
 using System.IO;
 
+
+//Check For Git Hub
 namespace Test_App.Android.Tests
 {
     class TagPresent_Test : AndroidMainPage
