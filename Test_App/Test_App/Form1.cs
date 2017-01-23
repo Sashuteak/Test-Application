@@ -10,18 +10,26 @@ using OpenQA.Selenium.Appium.Android;
 using Test_App.Android.Pages;
 using System.Collections.Generic;
 using Test_App.Karabas.Pages;
-using System.Diagnostics;
-using System.Threading;
-using OpenQA.Selenium.Appium;
+using Test_App.Server_Requests;
 
 namespace Test_App
 {
     public partial class Form1 : Form
     {
         IWebDriver Driver;
+        ServerManager man;
         public Form1()
         {
             InitializeComponent();
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            man = new ServerManager(textBox4, progressBar1);
+            for (int i = 0; i < man.list.Count; i++)
+            {
+                comboBox1.Items.Add(man.list[i]);
+            }
+            comboBox1.SelectedIndex = 0;
             //Делаем форму круглой
             System.Drawing.Drawing2D.GraphicsPath Form_Path = new System.Drawing.Drawing2D.GraphicsPath();
             Form_Path.AddEllipse(7, 7, Start_Test.Width - 14, Start_Test.Height - 14);
@@ -174,6 +182,32 @@ namespace Test_App
         private void button6_Click(object sender, EventArgs e)
         {
             Driver.Quit();
+        }
+
+
+        //Отправление Запроса На Сервер
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox4.Clear();
+            int index = comboBox1.SelectedIndex;
+            switch(index)
+            {
+                case 0:
+                    man.GetHall();
+                    break;
+                case 1:
+                    man.GetCities();
+                    break;
+                case 2:
+                    man.GetEvents();
+                    break;
+                case 3:
+                    man.GetActualHalls();
+                    break;
+                case 4:
+                    man.GetBuildingTypes();
+                    break;
+            }
         }
     }
 }

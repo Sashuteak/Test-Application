@@ -17,9 +17,9 @@ namespace Test_App
         {
             List<AndroidMainPage> testlist = new List<AndroidMainPage>();
 
-            testlist.Add(new Android.Tests.Login_Test(driver2, textBox1));
-            testlist.Add(new Android.Tests.Registration_Test(driver2, textBox1));
-            testlist.Add(new Android.Tests.Search_Test(driver2, textBox1));
+            testlist.Add(new Login_Test(driver2, textBox1));
+            testlist.Add(new Registration_Test(driver2, textBox1));
+            testlist.Add(new Search_Test(driver2, textBox1));
             testlist.Add(new AddToFavorite_Test(driver2, textBox1));
             testlist.Add(new ProfileNavigate_Test(driver2, textBox1));
             testlist.Add(new MainNavigate_Test(driver2, textBox1));

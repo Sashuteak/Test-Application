@@ -127,14 +127,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Test_App.exe" size="191456">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Test_App.exe" size="207840">
       <assemblyIdentity name="Test_App" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NUVC46OdO0WC8WUfywEP+ywQ8JDe6z67+TnUSFUdOng=</dsig:DigestValue>
+        <dsig:DigestValue>HpSoPSidwwItth0+DcmB7q3TA7HM5rvD2o9fxcfFB4s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

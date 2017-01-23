@@ -190,6 +190,11 @@
     </Compile>
     <Compile Include="Help Class\SetMethods.cs" />
     <Compile Include="Help Class\CheckMethods.cs" />
+    <Compile Include="Server Requests\GetBuildingTypes.cs" />
+    <Compile Include="Server Requests\GetEvents.cs" />
+    <Compile Include="Server Requests\GetCitys.cs" />
+    <Compile Include="Server Requests\GetHalls.cs" />
+    <Compile Include="Server Requests\ServerManager.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
