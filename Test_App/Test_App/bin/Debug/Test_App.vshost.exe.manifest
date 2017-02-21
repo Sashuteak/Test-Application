@@ -43,26 +43,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="appium-dotnet-driver.dll" size="88576">
-      <assemblyIdentity name="appium-dotnet-driver" version="2.0.1.1" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="appium-dotnet-driver.dll" size="95744">
+      <assemblyIdentity name="appium-dotnet-driver" version="3.0.0.2" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>n8yhMkzV3dCNmMjDx7ZsPI/zfeb20vWBwXWrRUuEen8=</dsig:DigestValue>
+        <dsig:DigestValue>uzsF1pXSiO/YZ1hXiWu+I9ZHlOaCOoEOFWVffvG33u4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Castle.Core.dll" size="436224">
-      <assemblyIdentity name="Castle.Core" version="3.3.0.0" publicKeyToken="407DD0808D44FBDC" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Castle.Core.dll" size="439808">
+      <assemblyIdentity name="Castle.Core" version="4.0.0.0" publicKeyToken="407DD0808D44FBDC" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>j2RYVGq7fYip1LgstdG2rwa6uzaAyEeqr806DK8rWLM=</dsig:DigestValue>
+        <dsig:DigestValue>az14MpCH1abxJc8O7HJiD23Bp0k0ZupuXiuyZLm/Jmg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -91,14 +91,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="nunit.framework.dll" size="303104">
-      <assemblyIdentity name="nunit.framework" version="3.5.0.0" publicKeyToken="2638CD05610744EB" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="nunit.framework.dll" size="314880">
+      <assemblyIdentity name="nunit.framework" version="3.6.0.0" publicKeyToken="2638CD05610744EB" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>2BFzNuBBKCU6vZi7BhqTs3UqbgsWavN/ZxdK2lso4GE=</dsig:DigestValue>
+        <dsig:DigestValue>251NO7n823PoloqtimgRGYC4hiu8kEHAkbvfa8Qz0CY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -127,38 +127,50 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Test_App.exe" size="207840">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Test_App.exe" size="213984">
       <assemblyIdentity name="Test_App" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>HpSoPSidwwItth0+DcmB7q3TA7HM5rvD2o9fxcfFB4s=</dsig:DigestValue>
+        <dsig:DigestValue>R4dGHTkMOPXN5dAlAWZjpk1uP4sczNOa7w6hWNcMQ30=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WebDriver.dll" size="1602560">
-      <assemblyIdentity name="WebDriver" version="3.0.1.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="UAParser.dll" size="190976">
+      <assemblyIdentity name="UAParser" version="2.1.0.0" publicKeyToken="F7377BF021646069" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>SlAFXs81XtmXmGpjezYwnOSDAncJElXhAAt7U5omylU=</dsig:DigestValue>
+        <dsig:DigestValue>Y6uemhHsuT44AjlgkO9UDL8zme66mp+drugReDlxaEw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WebDriver.Support.dll" size="56832">
-      <assemblyIdentity name="WebDriver.Support" version="3.0.1.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WebDriver.dll" size="1620480">
+      <assemblyIdentity name="WebDriver" version="3.1.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>WVZ+jG75y6kv1BvRkhSPpR8bqdTRcPDuWELc5WKmtts=</dsig:DigestValue>
+        <dsig:DigestValue>NUIuqv2fQEgy6ktjkl449eERc6Eb5lwfFwcQoLvUErg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WebDriver.Support.dll" size="57344">
+      <assemblyIdentity name="WebDriver.Support" version="3.1.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>sFxnwk2uSxpLFZWV6f4EC7nPh7Yk/mhvwNKk6JLeCMU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -171,13 +183,13 @@
       <dsig:DigestValue>CGP7vPF8C7FI0qR46Z33vNSRT5oYgeQ5ppywL7WFewE=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Test_App.exe.config" size="542">
+  <file name="Test_App.exe.config" size="777">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>90GRloPizLXGZG5gMT0/cvM3uhjObZsB5s0S3YEdhmA=</dsig:DigestValue>
+      <dsig:DigestValue>uKfYIvFLB5EIu+FjsKypzLMlpFZU0owE1mOhqaeXlBw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="theiconblockltd_3348.ico" size="67646">

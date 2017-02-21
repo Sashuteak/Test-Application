@@ -33,6 +33,7 @@ namespace Test_App
             testlist.Add(new BuyTicket_Test(driver2, textBox1));
             testlist.Add(new Hall_ScreenShots(driver2, textBox1));
             testlist.Add(new TagPresent_Test(driver2, textBox1));
+            testlist.Add(new EmptyDescription_Test(driver2, textBox1));
             return testlist;
         }
         public static List<Main_Page> SetWebTests(IWebDriver driver, TextBox textBox1, TextBox textBox2)

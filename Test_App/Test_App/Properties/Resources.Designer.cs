@@ -63,16 +63,6 @@ namespace Test_App.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap allflat1 {
-            get {
-                object obj = ResourceManager.GetObject("allflat1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap cleargreenbutton_5576 {
             get {
                 object obj = ResourceManager.GetObject("cleargreenbutton_5576", resourceCulture);
@@ -136,16 +126,6 @@ namespace Test_App.Properties {
         internal static System.Drawing.Bitmap playgreenbutton_9853 {
             get {
                 object obj = ResourceManager.GetObject("playgreenbutton_9853", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap sf1 {
-            get {
-                object obj = ResourceManager.GetObject("sf1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

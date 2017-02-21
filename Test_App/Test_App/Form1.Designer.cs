@@ -32,6 +32,9 @@
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.Start_Test = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -40,28 +43,29 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.Start_Test = new System.Windows.Forms.Button();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(93, 234);
+            this.button4.Location = new System.Drawing.Point(8, 256);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(69, 28);
+            this.button4.Size = new System.Drawing.Size(76, 28);
             this.button4.TabIndex = 3;
             this.button4.Text = "FireFox";
             this.button4.UseVisualStyleBackColor = true;
@@ -92,6 +96,39 @@
             this.listBox1.Size = new System.Drawing.Size(301, 484);
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // Start_Test
+            // 
+            this.Start_Test.Image = global::Test_App.Properties.Resources.playgreenbutton_9853;
+            this.Start_Test.Location = new System.Drawing.Point(54, 520);
+            this.Start_Test.Margin = new System.Windows.Forms.Padding(4);
+            this.Start_Test.Name = "Start_Test";
+            this.Start_Test.Size = new System.Drawing.Size(56, 50);
+            this.Start_Test.TabIndex = 8;
+            this.Start_Test.UseVisualStyleBackColor = true;
+            this.Start_Test.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Image = global::Test_App.Properties.Resources.minusgreenbutton_9565;
+            this.button6.Location = new System.Drawing.Point(210, 519);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(56, 50);
+            this.button6.TabIndex = 9;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Image = global::Test_App.Properties.Resources.cleargreenbutton_5576;
+            this.button7.Location = new System.Drawing.Point(134, 522);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(56, 50);
+            this.button7.TabIndex = 10;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // groupBox2
             // 
@@ -141,7 +178,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(8, 234);
+            this.button1.Location = new System.Drawing.Point(7, 225);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(77, 28);
@@ -184,62 +221,17 @@
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Image = global::Test_App.Properties.Resources.fm_black2;
-            this.radioButton3.Location = new System.Drawing.Point(420, 235);
+            this.radioButton3.Location = new System.Drawing.Point(355, 233);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(135, 27);
             this.radioButton3.TabIndex = 14;
             this.radioButton3.TabStop = true;
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
-            // button7
-            // 
-            this.button7.Image = global::Test_App.Properties.Resources.cleargreenbutton_5576;
-            this.button7.Location = new System.Drawing.Point(134, 522);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(56, 50);
-            this.button7.TabIndex = 10;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button6
-            // 
-            this.button6.Image = global::Test_App.Properties.Resources.minusgreenbutton_9565;
-            this.button6.Location = new System.Drawing.Point(210, 519);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(56, 50);
-            this.button6.TabIndex = 9;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // Start_Test
-            // 
-            this.Start_Test.Image = global::Test_App.Properties.Resources.playgreenbutton_9853;
-            this.Start_Test.Location = new System.Drawing.Point(54, 520);
-            this.Start_Test.Margin = new System.Windows.Forms.Padding(4);
-            this.Start_Test.Name = "Start_Test";
-            this.Start_Test.Size = new System.Drawing.Size(56, 50);
-            this.Start_Test.TabIndex = 8;
-            this.Start_Test.UseVisualStyleBackColor = true;
-            this.Start_Test.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.Image = ((System.Drawing.Image)(resources.GetObject("radioButton2.Image")));
-            this.radioButton2.Location = new System.Drawing.Point(348, 225);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(65, 51);
-            this.radioButton2.TabIndex = 5;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-            // 
             // radioButton1
             // 
             this.radioButton1.Image = global::Test_App.Properties.Resources.karabas;
-            this.radioButton1.Location = new System.Drawing.Point(170, 227);
+            this.radioButton1.Location = new System.Drawing.Point(92, 231);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(170, 42);
@@ -247,6 +239,18 @@
             this.radioButton1.TabStop = true;
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.Location = new System.Drawing.Point(270, 221);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Text = "tmp";
+            this.radioButton2.Size = new System.Drawing.Size(65, 51);
+            this.radioButton2.TabIndex = 5;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // groupBox4
             // 
@@ -261,23 +265,12 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Server Requests";
             // 
-            // comboBox1
+            // progressBar1
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(7, 27);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(305, 24);
-            this.comboBox1.TabIndex = 0;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(209, 520);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(103, 39);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Execute";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.progressBar1.Location = new System.Drawing.Point(7, 522);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(180, 35);
+            this.progressBar1.TabIndex = 18;
             // 
             // textBox4
             // 
@@ -289,19 +282,62 @@
             this.textBox4.TabIndex = 17;
             this.textBox4.WordWrap = false;
             // 
-            // progressBar1
+            // button2
             // 
-            this.progressBar1.Location = new System.Drawing.Point(7, 522);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(180, 35);
-            this.progressBar1.TabIndex = 18;
+            this.button2.Location = new System.Drawing.Point(209, 520);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(103, 39);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "Execute";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(7, 27);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(305, 24);
+            this.comboBox1.TabIndex = 0;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.textBox5);
+            this.groupBox5.Controls.Add(this.button3);
+            this.groupBox5.Location = new System.Drawing.Point(1210, 14);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(318, 581);
+            this.groupBox5.TabIndex = 19;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "UserAgent Statistic";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(7, 25);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBox5.Size = new System.Drawing.Size(305, 484);
+            this.textBox5.TabIndex = 17;
+            this.textBox5.WordWrap = false;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(107, 524);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(103, 39);
+            this.button3.TabIndex = 16;
+            this.button3.Text = "Execute";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1197, 608);
+            this.ClientSize = new System.Drawing.Size(1544, 607);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -321,6 +357,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -348,6 +386,9 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button button3;
     }
 }
 

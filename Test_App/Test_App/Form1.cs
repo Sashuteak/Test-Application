@@ -11,9 +11,26 @@ using Test_App.Android.Pages;
 using System.Collections.Generic;
 using Test_App.Karabas.Pages;
 using Test_App.Server_Requests;
+using Microsoft.Office.Interop.Excel;
+using System.Runtime.InteropServices;
+using UAParser;
+using System.Linq;
 
 namespace Test_App
 {
+    public class UserAgent
+    {
+        public string Agent { get; set; }
+        public string Os { set; get; }
+        public string Device { get; set; }
+
+        public UserAgent(string agent, string os, string device)
+        {
+            Agent = agent;
+            Os = os;
+            Device = device;
+        }
+    }
     public partial class Form1 : Form
     {
         IWebDriver Driver;
@@ -96,6 +113,7 @@ namespace Test_App
                 listBox1.Items.Add("14. Проверка Полной Покупки Билета");
                 listBox1.Items.Add("15. ScreenShots Отрисовок Залов");
                 listBox1.Items.Add("16. Проверка Описаний На Наличие Тегов");
+                listBox1.Items.Add("17. Проверка Присутствия Описаний");
             }
         }
 
@@ -208,6 +226,63 @@ namespace Test_App
                     man.GetBuildingTypes();
                     break;
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var uaParser = Parser.GetDefault();
+            List<UserAgent> agents = new List<UserAgent>();
+
+            Microsoft.Office.Interop.Excel.Application xlApp;
+            Workbook xlWorkBook;
+            Worksheet xlWorkSheet;
+            Range range;
+
+
+            xlApp = new Microsoft.Office.Interop.Excel.Application();
+            xlWorkBook = xlApp.Workbooks.Open(@"D:\Sashuteak\Test_App\Test_App\Test_App\visitordataUserAgentFebruary.xls", 0, true, 5, "", "", true, XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
+            xlWorkSheet = (Worksheet)xlWorkBook.Worksheets.get_Item(1);
+            range = xlWorkSheet.UsedRange;
+
+            Worksheet excelSheet = xlWorkBook.ActiveSheet;
+            Range rng = (Range)excelSheet.Cells[10, 10];
+
+            string str;
+            int rCnt;
+            int cCnt;
+            int rw = 0;
+            int cl = 0;
+
+            rw = range.Rows.Count;
+            cl = range.Columns.Count;
+
+            for (rCnt = 1; rCnt <= rw; rCnt++)
+            {
+                for (cCnt = 1; cCnt <= cl; cCnt++)
+                {
+                    str = (string)(range.Cells[rCnt, cCnt] as Range).Value2;
+                    str.Trim();
+                    var c = uaParser.Parse(str);
+                    agents.Add(new UserAgent(c.UA.ToString(), c.OS.ToString(), c.Device.ToString()));
+                }
+            }
+
+            var res = agents.GroupBy(x => x.Agent);
+            foreach (var item in res)
+            {
+                textBox5.AppendText($"AGENT : {item.Key.ToUpper()}\r\n");
+                var res2 = item.Select(x => x.Os).Distinct();
+                foreach (var item2 in res2)
+                {
+                    textBox5.AppendText($"  Os : {item2}\r\n");
+                }
+            }
+            xlWorkBook.Close(true, null, null);
+            xlApp.Quit();
+
+            Marshal.ReleaseComObject(xlWorkSheet);
+            Marshal.ReleaseComObject(xlWorkBook);
+            Marshal.ReleaseComObject(xlApp);
         }
     }
 }

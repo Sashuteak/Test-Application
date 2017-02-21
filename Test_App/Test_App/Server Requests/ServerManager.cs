@@ -85,20 +85,38 @@ namespace Test_App.Server_Requests
                 //    textbox.AppendText("ID -> " + root.Events[i].EventId.ToString() + "\r\n\r\n");
                 //    count2++;
                 //}
-                if(root.Events[i].ReplaceActivityDescription == "false")
+                //if (root.Events[i].ActivityDescriptionLongText == "" && root.Events[i].EventDescriptionText != "")
+                //{
+                //    textbox.AppendText(root.Events[i].ActivityName + "\r\n");
+                //    textbox.AppendText(root.Events[i].EventDate.ToString() + "\r\n");
+                //    textbox.AppendText("ID -> " + root.Events[i].EventId.ToString() + "\r\n\r\n");
+                //    count2++;
+                //}
+                for (int j = 0; j < root.Events[i].ActivityCategories.Length; j++)
                 {
-                    textbox.AppendText(root.Events[i].ActivityDescriptionLongText + "\r\n\r\n");
-                    count2++;
+                    if (root.Events[i].ActivityCategories[j].Name == "Кино")
+                    {
+                        textbox.AppendText(root.Events[i].ActivityName + "\r\n");
+                        textbox.AppendText(root.Events[i].EventDate.ToString() + "\r\n");
+                        textbox.AppendText("ID -> " + root.Events[i].EventId.ToString() + "\r\n\r\n");
+                        count2++;
+                    }
                 }
-                if(root.Events[i].ReplaceActivityDescription == "true")
-                {
-                    textbox.AppendText(root.Events[i].EventDescriptionText + "\r\n\r\n");
-                    count2++;
-                }
+                
+                //if(root.Events[i].ReplaceActivityDescription == "false")
+                //{
+                //    textbox.AppendText(root.Events[i].ActivityDescriptionLongText + "\r\n\r\n");
+                //    count2++;
+                //}
+                //if(root.Events[i].ReplaceActivityDescription == "true")
+                //{
+                //    textbox.AppendText(root.Events[i].EventDescriptionText + "\r\n\r\n");
+                //    count2++;
+                //}
 
                 //pb.Value += 1;
             }
-            textbox.AppendText("\r\nОбщее С Описанием -> " + count2.ToString());
+            textbox.AppendText("\r\nОбщее С без описания Описанием -> " + count2.ToString());
             //textbox.AppendText("\r\nОбщее Кол-во без описания-> " + count2.ToString());
             textbox.AppendText("\r\nОбщее Кол-во -> " + root.Events.Length.ToString());
         }

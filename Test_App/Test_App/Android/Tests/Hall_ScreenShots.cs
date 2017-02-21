@@ -3,6 +3,7 @@ using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Support.Extensions;
 using System;
 using System.Drawing.Imaging;
+using System.IO;
 using System.Threading;
 using System.Windows.Forms;
 using Test_App.Android.Pages;
@@ -25,16 +26,19 @@ namespace Test_App.Android.Tests
             string lname = "";
             string name;
             int count = 0;
+            string path = @"C:\Users\sashu\Desktop\ScreenShot";
             try
             {
+                if (!Directory.Exists(path))
+                    Directory.CreateDirectory(path);
                 AndroidEventPage event_page;
                 SliderViewClick();
-                MonthClick(3);
+                //MonthClick(5);
                 for (int i = 1; ; i++)
                 {
                     if (i == 1)
                     {
-                        for (int j = 0; j < 165; j++)
+                        for (int j = 0; j < 119; j++)
                         {
                             driver.FindElementsByXPath("//android.widget.RelativeLayout[@resource-id=\"com.karabas:id/root\"]");
                             driver.Swipe(350, 400, 350, 1100, 300);

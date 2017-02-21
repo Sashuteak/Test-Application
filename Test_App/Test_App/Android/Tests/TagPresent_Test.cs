@@ -36,7 +36,7 @@ namespace Test_App.Android.Tests
                 {
                     if (i == 1)
                     {
-                        for (int j = 0; j < 141; j++)
+                        for (int j = 0; j < 25; j++)
                         {
                             driver.FindElementsByXPath("//android.widget.RelativeLayout[@resource-id=\"com.karabas:id/root\"]");
                             driver.Swipe(350, 400, 350, 1100, 300);
@@ -54,8 +54,7 @@ namespace Test_App.Android.Tests
 
                     if (name == lname)
                     {
-                        textBox.AppendText("Сделаны ScreenShots всех мероприятий в этом месяце!");
-                        textBox.AppendText("Колличество Мероприятий -> " + i.ToString());
+                        textBox.AppendText("Проверено Мероприятий На Наличие Тегов -> " + i.ToString());
                         break;
                     }
 
@@ -93,7 +92,7 @@ namespace Test_App.Android.Tests
             finally
             {
                 textBox.AppendText("\r\n\r\n");
-                textBox.AppendText("Всего Сделано Проверено  -  " + count.ToString() + "\r\n");
+                textBox.AppendText("Всего Проверено  -  " + count.ToString() + "\r\n");
                 MessageBox.Show("Тест Завершен!");
             }
         }

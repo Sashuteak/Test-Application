@@ -19,7 +19,7 @@ namespace Test_App.Android.Pages
             PageFactory.InitElements(dri, this);
             this.driver = dri;
             textBox = obj;
-            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(60));
+            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(3));
         }
 
 
@@ -44,7 +44,14 @@ namespace Test_App.Android.Pages
         public string DescriptionClick()
         {
             description.Click();
-            return date.Text;
+            try
+            {
+                return date.Text;
+            }
+            catch (Exception)
+            {
+                return "";
+            }
         }
         public void PlaceClick()
         {

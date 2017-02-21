@@ -124,7 +124,7 @@ namespace Test_App.Android.Pages
         public void MonthClick(int index)
         {
             MonthList[index].Click();
-            textBox.AppendText("Step To -> " + MonthList[index].Text + "\r\n");
+            //textBox.AppendText("Step To -> " + MonthList[index].Text + "\r\n");
         }
         public void TableViewClick()
         {
@@ -134,7 +134,7 @@ namespace Test_App.Android.Pages
         public void SliderViewClick()
         {
             view_slider.Click();
-            textBox.AppendText("Step To -> Slider Events\r\n");
+            //textBox.AppendText("Step To -> Slider Events\r\n");
         }
         public AndroidFilterPage GoToFilter()
         {

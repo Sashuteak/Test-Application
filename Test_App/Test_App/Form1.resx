@@ -117,19 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="radioButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAHhSURBVFhH7de9S0JRGAZwp1oKWoQ+EUKHploj/wWh
-        PYIm5/bCiOofaGmL9ggKoSWizU1wb42a+hqiIuj2PHFfeTs8V00vEuTww85zz3nOS2FZJoqitsrl8hxU
-        1LMQ9m1xv3qmyFBB6RGMu/UkzPLVZRNwZOtOyFBBcQHO4ASeIXKe4Bj4vKDOJ5FhCKVTcAH+0iTc1/yu
-        tCNDD2V5uInLO8X9edUXkqFByShcx6WPsA6v8TrEnM+5j2ueG1G9ngwNCvbiMrqFEoQ/f8Ocz+9ctqt6
-        PRkSDg/Dgyvrxj0MqX4jQ8LBJVfUi0XVb2RIOLgaFHVrRfWb5hfYmIMD2Af+QuF6LQXsYR972Z9LGqAO
-        NvUlLLt1L9jDPlvXkwbwhz4gzQHY18zsTkoagNIc4Edmd9K/GeDTZ3Yn9WsA/rVsZnYnDQb4swO8Q5oD
-        2J/ob3Yn+QFqbtM5pDkA+2xdSxogCztQgTFIcwD2bcI2ZOUAIWzkhwtV+Fsl1W9kSDjIj91JH7869QbT
-        qt/I0OBwEQ7hFMKPYlfAnK8+5z7mPFdUvZ4MFZQ1wF+0EOcLQd4Iz7YiQ4XFwUWDAfo+QDW4aCbO+W7x
-        eTU824oMFRTPA//b4Vvzx7/qWG/AS/x83j9rLcp8AYQDufptiMoUAAAAAElFTkSuQmCC
-</value>
-  </data>
 </root>
