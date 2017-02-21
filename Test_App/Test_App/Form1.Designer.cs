@@ -241,11 +241,11 @@
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
-            // 
+            //
+            this.radioButton2.Image = global::Test_App.Properties.Resources.Android;
             this.radioButton2.Location = new System.Drawing.Point(270, 221);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Text = "tmp";
             this.radioButton2.Size = new System.Drawing.Size(65, 51);
             this.radioButton2.TabIndex = 5;
             this.radioButton2.TabStop = true;

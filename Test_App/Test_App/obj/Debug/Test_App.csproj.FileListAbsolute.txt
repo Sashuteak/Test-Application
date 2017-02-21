@@ -30,6 +30,10 @@ D:\C#\Projects\Test_App\Test_App\obj\Debug\Test_App.csprojResolveAssemblyReferen
 D:\C#\Projects\Test_App\Test_App\obj\Debug\Test_App.Form1.resources
 D:\C#\Projects\Test_App\Test_App\obj\Debug\Test_App.Properties.Resources.resources
 D:\C#\Projects\Test_App\Test_App\obj\Debug\Test_App.csproj.GenerateResource.Cache
+D:\Sashuteak\Test_App\Test_App\Test_App\obj\Debug\Test_App.csproj.ResolveComReference.cache
+D:\Sashuteak\Test_App\Test_App\Test_App\obj\Debug\Test_App.UserAgent.resources
+D:\Sashuteak\Test_App\Test_App\Test_App\obj\Debug\Test_App.Properties.Resources.resources
+D:\Sashuteak\Test_App\Test_App\Test_App\obj\Debug\Test_App.csproj.GenerateResource.Cache
 D:\Sashuteak\Test_App\Test_App\Test_App\bin\Debug\wires-0.6.0-win.exe
 D:\Sashuteak\Test_App\Test_App\Test_App\bin\Debug\JSikuliModule.jar
 D:\Sashuteak\Test_App\Test_App\Test_App\bin\Debug\Test_App.exe.config
@@ -56,10 +60,6 @@ D:\Sashuteak\Test_App\Test_App\Test_App\bin\Debug\SikuliModule.pdb
 D:\Sashuteak\Test_App\Test_App\Test_App\bin\Debug\UAParser.xml
 D:\Sashuteak\Test_App\Test_App\Test_App\bin\Debug\WebDriver.xml
 D:\Sashuteak\Test_App\Test_App\Test_App\bin\Debug\WebDriver.Support.xml
-D:\Sashuteak\Test_App\Test_App\Test_App\obj\Debug\Test_App.csproj.ResolveComReference.cache
-D:\Sashuteak\Test_App\Test_App\Test_App\obj\Debug\Test_App.UserAgent.resources
-D:\Sashuteak\Test_App\Test_App\Test_App\obj\Debug\Test_App.Properties.Resources.resources
-D:\Sashuteak\Test_App\Test_App\Test_App\obj\Debug\Test_App.csproj.GenerateResource.Cache
 D:\Sashuteak\Test_App\Test_App\Test_App\obj\Debug\Test_App.exe.manifest
 D:\Sashuteak\Test_App\Test_App\Test_App\obj\Debug\Test_App.application
 D:\Sashuteak\Test_App\Test_App\Test_App\obj\Debug\Test_App.exe

@@ -233,34 +233,21 @@ namespace Test_App
             var uaParser = Parser.GetDefault();
             List<UserAgent> agents = new List<UserAgent>();
 
-            Microsoft.Office.Interop.Excel.Application xlApp;
+            Microsoft.Office.Interop.Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
             Workbook xlWorkBook;
             Worksheet xlWorkSheet;
             Range range;
 
-
-            xlApp = new Microsoft.Office.Interop.Excel.Application();
             xlWorkBook = xlApp.Workbooks.Open(@"D:\Sashuteak\Test_App\Test_App\Test_App\visitordataUserAgentFebruary.xls", 0, true, 5, "", "", true, XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
             xlWorkSheet = (Worksheet)xlWorkBook.Worksheets.get_Item(1);
             range = xlWorkSheet.UsedRange;
 
-            Worksheet excelSheet = xlWorkBook.ActiveSheet;
-            Range rng = (Range)excelSheet.Cells[10, 10];
-
             string str;
-            int rCnt;
-            int cCnt;
-            int rw = 0;
-            int cl = 0;
-
-            rw = range.Rows.Count;
-            cl = range.Columns.Count;
-
-            for (rCnt = 1; rCnt <= rw; rCnt++)
+            for (int i = 1; i <= range.Rows.Count; i++)
             {
-                for (cCnt = 1; cCnt <= cl; cCnt++)
+                for (int j = 1; j <= range.Columns.Count; j++)
                 {
-                    str = (string)(range.Cells[rCnt, cCnt] as Range).Value2;
+                    str = (string)(range.Cells[i, j] as Range).Value2;
                     str.Trim();
                     var c = uaParser.Parse(str);
                     agents.Add(new UserAgent(c.UA.ToString(), c.OS.ToString(), c.Device.ToString()));

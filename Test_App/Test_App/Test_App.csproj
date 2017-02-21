@@ -229,6 +229,7 @@
     <Content Include="JSikuliModule.jar">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Android.png" />
     <Content Include="theiconblockltd_3348.ico" />
     <None Include="Resources\fm_black2.png" />
     <None Include="Resources\fm_black1.png" />

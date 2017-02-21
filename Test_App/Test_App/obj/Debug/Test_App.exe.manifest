@@ -127,14 +127,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Test_App.exe" size="215008">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Test_App.exe" size="218080">
       <assemblyIdentity name="Test_App" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>szpWL4p7NEl4tr4/Kn5q7V8OdxtWdPt69ih5y8BBpi8=</dsig:DigestValue>
+        <dsig:DigestValue>RDG2Ddub1BVm8SzZ/kpE3+sJs2/xW92T+n5/8MASEz4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -181,6 +181,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>CGP7vPF8C7FI0qR46Z33vNSRT5oYgeQ5ppywL7WFewE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Android.png" size="3364">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>soAkD3uaI8lR0iq2SbSDRb4zW2S0vwdF/MO+gFiIZYU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Test_App.exe.config" size="777">
