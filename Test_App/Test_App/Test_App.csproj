@@ -160,13 +160,17 @@
     <Compile Include="Android\Tests\Search_Test.cs" />
     <Compile Include="Android\Tests\TagPresent_Test.cs" />
     <Compile Include="Help Class\ActionMethods.cs" />
-    <Compile Include="Form1.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Help Class\Android_Info.cs" />
     <Compile Include="Help Class\GetMethods.cs" />
     <Compile Include="Help Class\Info.cs" />
+    <Compile Include="Help Class\Source.cs" />
+    <Compile Include="Help Class\UserAgent.cs" />
     <Compile Include="Karabas\Pages\Account_Page.cs" />
     <Compile Include="Karabas\Pages\Buy_Page.cs" />
     <Compile Include="Karabas\Pages\Event_Page.cs" />

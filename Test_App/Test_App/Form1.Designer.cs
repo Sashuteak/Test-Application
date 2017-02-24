@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -53,16 +52,24 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(8, 256);
+            this.button4.Location = new System.Drawing.Point(22, 312);
             this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(76, 28);
@@ -77,11 +84,11 @@
             this.groupBox1.Controls.Add(this.Start_Test);
             this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Controls.Add(this.button7);
-            this.groupBox1.Location = new System.Drawing.Point(15, 12);
+            this.groupBox1.Location = new System.Drawing.Point(7, 7);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(319, 581);
+            this.groupBox1.Size = new System.Drawing.Size(319, 673);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Список Доступных Тестов";
@@ -93,14 +100,14 @@
             this.listBox1.Location = new System.Drawing.Point(8, 26);
             this.listBox1.Margin = new System.Windows.Forms.Padding(4);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(301, 484);
+            this.listBox1.Size = new System.Drawing.Size(301, 548);
             this.listBox1.TabIndex = 0;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // Start_Test
             // 
             this.Start_Test.Image = global::Test_App.Properties.Resources.playgreenbutton_9853;
-            this.Start_Test.Location = new System.Drawing.Point(54, 520);
+            this.Start_Test.Location = new System.Drawing.Point(38, 596);
             this.Start_Test.Margin = new System.Windows.Forms.Padding(4);
             this.Start_Test.Name = "Start_Test";
             this.Start_Test.Size = new System.Drawing.Size(56, 50);
@@ -111,7 +118,7 @@
             // button6
             // 
             this.button6.Image = global::Test_App.Properties.Resources.minusgreenbutton_9565;
-            this.button6.Location = new System.Drawing.Point(210, 519);
+            this.button6.Location = new System.Drawing.Point(194, 595);
             this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(56, 50);
@@ -122,7 +129,7 @@
             // button7
             // 
             this.button7.Image = global::Test_App.Properties.Resources.cleargreenbutton_5576;
-            this.button7.Location = new System.Drawing.Point(134, 522);
+            this.button7.Location = new System.Drawing.Point(118, 598);
             this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(56, 50);
@@ -135,11 +142,11 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.textBox3);
             this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Location = new System.Drawing.Point(341, 12);
+            this.groupBox2.Location = new System.Drawing.Point(334, 7);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(519, 289);
+            this.groupBox2.Size = new System.Drawing.Size(854, 289);
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Отчет";
@@ -171,14 +178,14 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox1.Size = new System.Drawing.Size(501, 222);
+            this.textBox1.Size = new System.Drawing.Size(838, 222);
             this.textBox1.TabIndex = 13;
             this.textBox1.WordWrap = false;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(7, 225);
+            this.button1.Location = new System.Drawing.Point(22, 238);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(77, 28);
@@ -195,11 +202,11 @@
             this.groupBox3.Controls.Add(this.button4);
             this.groupBox3.Controls.Add(this.radioButton1);
             this.groupBox3.Controls.Add(this.radioButton2);
-            this.groupBox3.Location = new System.Drawing.Point(341, 309);
+            this.groupBox3.Location = new System.Drawing.Point(334, 313);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(519, 284);
+            this.groupBox3.Size = new System.Drawing.Size(854, 367);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Console Message";
@@ -213,7 +220,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
             this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox2.Size = new System.Drawing.Size(501, 196);
+            this.textBox2.Size = new System.Drawing.Size(838, 196);
             this.textBox2.TabIndex = 0;
             this.textBox2.WordWrap = false;
             // 
@@ -221,7 +228,7 @@
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Image = global::Test_App.Properties.Resources.fm_black2;
-            this.radioButton3.Location = new System.Drawing.Point(355, 233);
+            this.radioButton3.Location = new System.Drawing.Point(496, 275);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(135, 27);
             this.radioButton3.TabIndex = 14;
@@ -231,7 +238,7 @@
             // radioButton1
             // 
             this.radioButton1.Image = global::Test_App.Properties.Resources.karabas;
-            this.radioButton1.Location = new System.Drawing.Point(92, 231);
+            this.radioButton1.Location = new System.Drawing.Point(166, 263);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(170, 42);
@@ -241,9 +248,9 @@
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
-            //
+            // 
             this.radioButton2.Image = global::Test_App.Properties.Resources.Android;
-            this.radioButton2.Location = new System.Drawing.Point(270, 221);
+            this.radioButton2.Location = new System.Drawing.Point(379, 263);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(65, 51);
@@ -258,7 +265,7 @@
             this.groupBox4.Controls.Add(this.textBox4);
             this.groupBox4.Controls.Add(this.button2);
             this.groupBox4.Controls.Add(this.comboBox1);
-            this.groupBox4.Location = new System.Drawing.Point(867, 12);
+            this.groupBox4.Location = new System.Drawing.Point(37, 38);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(318, 581);
             this.groupBox4.TabIndex = 15;
@@ -304,7 +311,7 @@
             // 
             this.groupBox5.Controls.Add(this.textBox5);
             this.groupBox5.Controls.Add(this.button3);
-            this.groupBox5.Location = new System.Drawing.Point(1210, 14);
+            this.groupBox5.Location = new System.Drawing.Point(15, 17);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(318, 581);
             this.groupBox5.TabIndex = 19;
@@ -331,17 +338,57 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1203, 716);
+            this.tabControl1.TabIndex = 20;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tabPage2.Controls.Add(this.groupBox1);
+            this.tabPage2.Controls.Add(this.groupBox2);
+            this.tabPage2.Controls.Add(this.groupBox3);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1195, 687);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Tests";
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tabPage1.Controls.Add(this.groupBox5);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(1195, 687);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "User Agent";
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tabPage3.Controls.Add(this.groupBox4);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(1195, 687);
+            this.tabPage3.TabIndex = 3;
+            this.tabPage3.Text = "Server Requests";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1544, 607);
-            this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(1227, 740);
+            this.Controls.Add(this.tabControl1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -359,6 +406,10 @@
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -389,6 +440,10 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage3;
     }
 }
 

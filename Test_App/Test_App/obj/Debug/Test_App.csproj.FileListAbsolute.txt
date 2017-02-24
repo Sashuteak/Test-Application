@@ -31,8 +31,6 @@ D:\C#\Projects\Test_App\Test_App\obj\Debug\Test_App.Form1.resources
 D:\C#\Projects\Test_App\Test_App\obj\Debug\Test_App.Properties.Resources.resources
 D:\C#\Projects\Test_App\Test_App\obj\Debug\Test_App.csproj.GenerateResource.Cache
 D:\Sashuteak\Test_App\Test_App\Test_App\obj\Debug\Test_App.csproj.ResolveComReference.cache
-D:\Sashuteak\Test_App\Test_App\Test_App\obj\Debug\Test_App.UserAgent.resources
-D:\Sashuteak\Test_App\Test_App\Test_App\obj\Debug\Test_App.Properties.Resources.resources
 D:\Sashuteak\Test_App\Test_App\Test_App\obj\Debug\Test_App.csproj.GenerateResource.Cache
 D:\Sashuteak\Test_App\Test_App\Test_App\bin\Debug\wires-0.6.0-win.exe
 D:\Sashuteak\Test_App\Test_App\Test_App\bin\Debug\JSikuliModule.jar
@@ -65,3 +63,5 @@ D:\Sashuteak\Test_App\Test_App\Test_App\obj\Debug\Test_App.application
 D:\Sashuteak\Test_App\Test_App\Test_App\obj\Debug\Test_App.exe
 D:\Sashuteak\Test_App\Test_App\Test_App\obj\Debug\Test_App.pdb
 D:\Sashuteak\Test_App\Test_App\Test_App\obj\Debug\Test_App.csprojResolveAssemblyReference.cache
+D:\Sashuteak\Test_App\Test_App\Test_App\obj\Debug\Test_App.Properties.Resources.resources
+D:\Sashuteak\Test_App\Test_App\Test_App\obj\Debug\Test_App.Form1.resources
