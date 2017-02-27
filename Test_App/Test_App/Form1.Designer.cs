@@ -56,6 +56,28 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button11 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -65,6 +87,7 @@
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // button4
@@ -309,11 +332,16 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.button11);
+            this.groupBox5.Controls.Add(this.label9);
+            this.groupBox5.Controls.Add(this.textBox8);
+            this.groupBox5.Controls.Add(this.textBox7);
+            this.groupBox5.Controls.Add(this.label8);
             this.groupBox5.Controls.Add(this.textBox5);
             this.groupBox5.Controls.Add(this.button3);
             this.groupBox5.Location = new System.Drawing.Point(15, 17);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(318, 581);
+            this.groupBox5.Size = new System.Drawing.Size(1162, 653);
             this.groupBox5.TabIndex = 19;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "UserAgent Statistic";
@@ -343,6 +371,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -382,11 +411,228 @@
             this.tabPage3.TabIndex = 3;
             this.tabPage3.Text = "Server Requests";
             // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.tabPage4.Controls.Add(this.label7);
+            this.tabPage4.Controls.Add(this.comboBox3);
+            this.tabPage4.Controls.Add(this.richTextBox2);
+            this.tabPage4.Controls.Add(this.button10);
+            this.tabPage4.Controls.Add(this.richTextBox1);
+            this.tabPage4.Controls.Add(this.button9);
+            this.tabPage4.Controls.Add(this.label6);
+            this.tabPage4.Controls.Add(this.label5);
+            this.tabPage4.Controls.Add(this.textBox6);
+            this.tabPage4.Controls.Add(this.label4);
+            this.tabPage4.Controls.Add(this.progressBar2);
+            this.tabPage4.Controls.Add(this.button8);
+            this.tabPage4.Controls.Add(this.label3);
+            this.tabPage4.Controls.Add(this.comboBox2);
+            this.tabPage4.Controls.Add(this.button5);
+            this.tabPage4.Controls.Add(this.label2);
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(1195, 687);
+            this.tabPage4.TabIndex = 4;
+            this.tabPage4.Text = "Orders Check";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(14, 587);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(114, 17);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Выбрать Статус";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Отменен",
+            "Резерв",
+            "В ожидании оплаты",
+            "Оплачен",
+            "В реализации",
+            "Возврат билетов"});
+            this.comboBox3.Location = new System.Drawing.Point(14, 610);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(227, 24);
+            this.comboBox3.TabIndex = 16;
+            this.comboBox3.SelectedIndexChanged += new System.EventHandler(this.comboBox3_SelectedIndexChanged);
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(17, 167);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(545, 399);
+            this.richTextBox2.TabIndex = 15;
+            this.richTextBox2.Text = "";
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(608, 102);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(100, 23);
+            this.button10.TabIndex = 14;
+            this.button10.Text = "Найти";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(608, 136);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(568, 430);
+            this.richTextBox1.TabIndex = 13;
+            this.richTextBox1.Text = "";
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(853, 597);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(165, 37);
+            this.button9.TabIndex = 12;
+            this.button9.Text = "Check";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(623, 604);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(212, 17);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Проверить на arm fronmanager";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(20, 145);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(144, 17);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Результат Проверки";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(714, 102);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(462, 22);
+            this.textBox6.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(711, 82);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 17);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Поиск";
+            // 
+            // progressBar2
+            // 
+            this.progressBar2.Location = new System.Drawing.Point(17, 114);
+            this.progressBar2.Name = "progressBar2";
+            this.progressBar2.Size = new System.Drawing.Size(545, 10);
+            this.progressBar2.TabIndex = 5;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(406, 85);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(156, 23);
+            this.button8.TabIndex = 4;
+            this.button8.Text = "Загрузить";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 60);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 17);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Все Файлы";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(17, 83);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(227, 24);
+            this.comboBox2.TabIndex = 2;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(138, 14);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(106, 34);
+            this.button5.TabIndex = 1;
+            this.button5.Text = "Выбрать";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(14, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 17);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "ВЫбрать Excel";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(508, 23);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(130, 17);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Строка User Agent";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox7.Location = new System.Drawing.Point(507, 46);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(649, 30);
+            this.textBox7.TabIndex = 19;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(383, 107);
+            this.textBox8.Multiline = true;
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(773, 257);
+            this.textBox8.TabIndex = 20;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(383, 84);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(76, 17);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Результат";
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(383, 45);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(115, 31);
+            this.button11.TabIndex = 22;
+            this.button11.Text = "Pars";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1227, 740);
             this.Controls.Add(this.tabControl1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -410,6 +656,8 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -444,6 +692,28 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ProgressBar progressBar2;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label8;
     }
 }
 

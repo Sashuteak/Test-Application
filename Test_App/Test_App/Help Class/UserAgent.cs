@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Test_App.Help_Class
 {
-    class UserAgent
+    public class UserAgent
     {
         public string Agent { get; set; }
         public string Os { set; get; }

@@ -11,13 +11,6 @@ using Test_App.Android.Pages;
 using System.Collections.Generic;
 using Test_App.Karabas.Pages;
 using Test_App.Server_Requests;
-using Microsoft.Office.Interop.Excel;
-using System.Runtime.InteropServices;
-using UAParser;
-using System.Linq;
-using System.Threading;
-using Test_App.Help_Class;
-using System.Text.RegularExpressions;
 
 namespace Test_App
 {
@@ -52,6 +45,15 @@ namespace Test_App
             Refresh.AddEllipse(7, 5, button7.Width - 15, button7.Height - 14);
             Region Refresh_Region = new Region(Refresh);
             button7.Region = Refresh_Region;
+
+
+            app = new Microsoft.Office.Interop.Excel.Application();
+            DirectoryInfo fi = new DirectoryInfo(@"..\..\Excel Files");
+            foreach (var item in fi.EnumerateFiles())
+            {
+                comboBox2.Items.Add(item.Name);
+            }
+            comboBox2.SelectedIndex = 0;
         }
 
         //Отображение Названия Теста
@@ -216,195 +218,6 @@ namespace Test_App
                     man.GetBuildingTypes();
                     break;
             }
-        }
-
-
-        //Exel parser for user agent
-        private void button3_Click(object sender, EventArgs e)
-        {
-            string path = @"https://arm.frontmanager.com.ua/OrderCardWA?order=";
-            List<Source> src = new List<Source>();
-
-            Microsoft.Office.Interop.Excel.Application app2 = new Microsoft.Office.Interop.Excel.Application();
-            Workbook xlWorkBook2;
-            Worksheet xlWorkSheet2;
-            Range range2;
-
-            xlWorkBook2 = app2.Workbooks.Open(@"D:\Sashuteak\Test_App\Test_App\Test_App\liqpay.xls", 0, true, 5, "", "", true, XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
-            xlWorkSheet2 = (Worksheet)xlWorkBook2.Worksheets.get_Item(1);
-            range2 = xlWorkSheet2.UsedRange;
-
-            progressBar1.Maximum = range2.Rows.Count;
-            progressBar1.Minimum = 0;
-
-            for (int i = 1; i <= range2.Rows.Count; i++)
-            {
-                src.Add(new Source(range2[i, 17].Text, decimal.Parse(range2[i, 2].Text), range2[i, 13].Text));
-                progressBar1.Value += 1;
-            }
-            progressBar1.Value = 0;
-
-            //var reve = src.Where(s => s.Status == "reversed");
-            //foreach (var item in reve)
-            //{
-            //    textBox1.AppendText(item.ToString() + "\r\n");
-            //}
-
-            xlWorkBook2.Close(true, null, null);
-            app2.Quit();
-
-
-
-            Microsoft.Office.Interop.Excel.Application app = new Microsoft.Office.Interop.Excel.Application();
-            Workbook xlWorkBook;
-            Worksheet xlWorkSheet;
-            Range range;
-
-            List<string> orders = new List<string>();
-            xlWorkBook = app.Workbooks.Open(@"D:\Sashuteak\Test_App\Test_App\Test_App\expdata.xls", 0, true, 5, "", "", true, XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
-            xlWorkSheet = (Worksheet)xlWorkBook.Worksheets.get_Item(1);
-            range = xlWorkSheet.UsedRange;
-            progressBar1.Maximum = range.Rows.Count;
-            progressBar1.Minimum = 0;
-            for (int i = 1; i <= range.Rows.Count; i++)
-            {
-                orders.Add(range[i, 1].Text);
-                progressBar1.Value += 1;
-            }
-
-            xlWorkBook.Close(true, null, null);
-            app.Quit();
-
-            progressBar1.Value = 0;
-            Driver = new ChromeDriver();
-            Driver.Manage().Window.Maximize();
-            Driver.Url = "https://arm.frontmanager.com.ua/";
-            Driver.FindElement(By.Id("inLogin")).SendKeys("a.Levchenko");
-            Driver.FindElement(By.Id("inPwd")).SendKeys("Jesus is way");
-            Driver.FindElement(By.Id("doLogin")).Click();
-            Driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(60));
-            Thread.Sleep(30000);
-            int k = 1;
-            for (int i = 0; i < orders.Count; i++)
-            {
-                var check = src.Where(s => s.OrderId.Contains(orders[i]));
-                if (check.Count() == 0)
-                {
-                    textBox2.AppendText(k + ". Перепроверить Заказ - " + orders[i] + "\r\n");
-                }
-                else
-                {
-                    
-                    Driver.Url = path + orders[i];
-                    string mainPrice = Driver.FindElement(By.XPath(".//*[@id='tabGeneral']/div[1]/div[2]/div[2]/p[1]")).Text.Replace('.', ',');
-                    string bonusPrice = Driver.FindElement(By.XPath(".//*[@id='tabGeneral']/div[1]/div[2]/div[2]/p[3]/span")).Text.Replace('.', ',');
-
-                    decimal x = 0;
-                    decimal y = 0;
-                    Regex regex = new Regex(@"\d{1,5}.\d{1,3}");
-                    MatchCollection matches = regex.Matches(mainPrice);
-                    if (matches.Count > 0)
-                    {
-                        foreach (Match match in matches)
-                        {
-                            x = decimal.Parse(match.Value.Replace('.', ','));
-                        }
-                            
-                    }
-
-                    MatchCollection matches2 = regex.Matches(bonusPrice);
-                    if (matches2.Count > 0)
-                    {
-                        foreach (Match match in matches2)
-                        {
-                            y = decimal.Parse(match.Value.Replace('.', ','));
-                        }
-                         
-                    }
-                    var ch = check.First();
-                    if (x - y == ch.Price)
-                    {
-                        textBox1.AppendText(k + ". Заказ Прошел Проверку - " + orders[i] + "\r\n");
-                    }
-                }
-                k++;
-            }
-
-
-            //foreach (var item in orders)
-            //{
-            //    textBox2.AppendText(item + "\r\n");
-            //}
-            ////int coun = 1;
-            ////bool check = false;
-            ////progressBar1.Maximum = range2.Rows.Count + orders.Count + 100;
-            ////progressBar1.Minimum = 0;
-            ////for (int i = 0; i < 10; i++)
-            ////{
-            ////    for (int j = 1; j <= range2.Rows.Count; j++)
-            ////    {
-            ////        if (((string)range2[j, 17].Text).Contains(orders[i]))
-            ////        {
-            ////            textBox2.AppendText(coun.ToString() + ". " + (string)range2[j, 2].Text + "\r\n");
-            ////            coun++;
-            ////            check = true;
-            ////            break;
-            ////        }
-            ////    }
-
-            ////    if (check)
-            ////    {
-            ////        textBox1.AppendText(orders[i] + " - false\r\n");
-            ////        check = false;
-            ////    }
-            ////    else
-            ////    {
-            ////        textBox1.AppendText(orders[i] + " - true\r\n");
-            ////    }
-            ////}
-
-
-
-            //var uaParser = Parser.GetDefault();
-            //List<UserAgent> agents = new List<UserAgent>();
-
-            //Microsoft.Office.Interop.Excel.Application xlApp = new Microsoft.Office.Interop.Excel.Application();
-            //Workbook xlWorkBook;
-            //Worksheet xlWorkSheet;
-            //Range range;
-
-            //xlWorkBook = xlApp.Workbooks.Open(@"D:\Sashuteak\Test_App\Test_App\Test_App\visitordataUserAgentFebruary.xls", 0, true, 5, "", "", true, XlPlatform.xlWindows, "\t", false, false, 0, true, 1, 0);
-            //xlWorkSheet = (Worksheet)xlWorkBook.Worksheets.get_Item(1);
-            //range = xlWorkSheet.UsedRange;
-
-            //string str;
-            //for (int i = 1; i <= range.Rows.Count; i++)
-            //{
-            //    for (int j = 1; j <= range.Columns.Count; j++)
-            //    {
-            //        str = (string)(range.Cells[i, j] as Range).Value2;
-            //        str.Trim();
-            //        var c = uaParser.Parse(str);
-            //        agents.Add(new UserAgent(c.UA.ToString(), c.OS.ToString(), c.Device.ToString()));
-            //    }
-            //}
-
-            //var res = agents.GroupBy(x => x.Agent);
-            //foreach (var item in res)
-            //{
-            //    textBox5.AppendText($"AGENT : {item.Key.ToUpper()}\r\n");
-            //    var res2 = item.Select(x => x.Os).Distinct();
-            //    foreach (var item2 in res2)
-            //    {
-            //        textBox5.AppendText($"  Os : {item2}\r\n");
-            //    }
-            //}
-            //xlWorkBook.Close(true, null, null);
-            //xlApp.Quit();
-
-            //Marshal.ReleaseComObject(xlWorkSheet);
-            //Marshal.ReleaseComObject(xlWorkBook);
-            //Marshal.ReleaseComObject(xlApp);
         }
     }
 }
