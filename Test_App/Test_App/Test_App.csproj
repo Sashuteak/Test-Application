@@ -204,6 +204,7 @@
     </Compile>
     <Compile Include="Help Class\SetMethods.cs" />
     <Compile Include="Help Class\CheckMethods.cs" />
+    <Compile Include="Server Requests\GetAuth.cs" />
     <Compile Include="Server Requests\GetBuildingTypes.cs" />
     <Compile Include="Server Requests\GetEvents.cs" />
     <Compile Include="Server Requests\GetCitys.cs" />

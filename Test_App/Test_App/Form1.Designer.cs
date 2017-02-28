@@ -50,7 +50,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -73,11 +77,8 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button5 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button11 = new System.Windows.Forms.Button();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.progressBar3 = new System.Windows.Forms.ProgressBar();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -332,12 +333,13 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.progressBar3);
+            this.groupBox5.Controls.Add(this.richTextBox3);
             this.groupBox5.Controls.Add(this.button11);
             this.groupBox5.Controls.Add(this.label9);
             this.groupBox5.Controls.Add(this.textBox8);
             this.groupBox5.Controls.Add(this.textBox7);
             this.groupBox5.Controls.Add(this.label8);
-            this.groupBox5.Controls.Add(this.textBox5);
             this.groupBox5.Controls.Add(this.button3);
             this.groupBox5.Location = new System.Drawing.Point(15, 17);
             this.groupBox5.Name = "groupBox5";
@@ -346,19 +348,54 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "UserAgent Statistic";
             // 
-            // textBox5
+            // button11
             // 
-            this.textBox5.Location = new System.Drawing.Point(7, 25);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBox5.Size = new System.Drawing.Size(305, 484);
-            this.textBox5.TabIndex = 17;
-            this.textBox5.WordWrap = false;
+            this.button11.Location = new System.Drawing.Point(383, 45);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(115, 31);
+            this.button11.TabIndex = 22;
+            this.button11.Text = "Pars";
+            this.button11.UseVisualStyleBackColor = true;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(383, 84);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(76, 17);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "Результат";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox8.Location = new System.Drawing.Point(383, 107);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
+            this.textBox8.Size = new System.Drawing.Size(773, 30);
+            this.textBox8.TabIndex = 20;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox7.Location = new System.Drawing.Point(507, 46);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(649, 30);
+            this.textBox7.TabIndex = 19;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(508, 23);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(130, 17);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Строка User Agent";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(107, 524);
+            this.button3.Location = new System.Drawing.Point(386, 567);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(103, 39);
             this.button3.TabIndex = 16;
@@ -584,49 +621,20 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "ВЫбрать Excel";
             // 
-            // label8
+            // richTextBox3
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(508, 23);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(130, 17);
-            this.label8.TabIndex = 18;
-            this.label8.Text = "Строка User Agent";
+            this.richTextBox3.Location = new System.Drawing.Point(6, 23);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.Size = new System.Drawing.Size(360, 624);
+            this.richTextBox3.TabIndex = 23;
+            this.richTextBox3.Text = "";
             // 
-            // textBox7
+            // progressBar3
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox7.Location = new System.Drawing.Point(507, 46);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(649, 30);
-            this.textBox7.TabIndex = 19;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(383, 107);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(773, 257);
-            this.textBox8.TabIndex = 20;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(383, 84);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 17);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "Результат";
-            // 
-            // button11
-            // 
-            this.button11.Location = new System.Drawing.Point(383, 45);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(115, 31);
-            this.button11.TabIndex = 22;
-            this.button11.Text = "Pars";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
+            this.progressBar3.Location = new System.Drawing.Point(386, 623);
+            this.progressBar3.Name = "progressBar3";
+            this.progressBar3.Size = new System.Drawing.Size(770, 23);
+            this.progressBar3.TabIndex = 24;
             // 
             // Form1
             // 
@@ -686,7 +694,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -714,6 +721,8 @@
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.ProgressBar progressBar3;
     }
 }
 

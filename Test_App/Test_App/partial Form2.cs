@@ -26,26 +26,30 @@ namespace Test_App
             range = xlWorkSheet.UsedRange;
 
             string str;
+            progressBar3.Maximum = range.Rows.Count;
+            progressBar3.Minimum = 0;
             for (int i = 1; i <= range.Rows.Count; i++)
             {
-                for (int j = 1; j <= range.Columns.Count; j++)
-                {
-                    str = (string)(range.Cells[i, j] as Range).Value2;
-                    str.Trim();
-                    var c = uaParser.Parse(str);
-                    agents.Add(new Help_Class.UserAgent(c.UA.ToString(), c.OS.ToString(), c.Device.ToString()));
-                }
+                str = (string)(range.Cells[i, 1] as Range).Value2;
+                str.Trim();
+                var c = uaParser.Parse(str);
+                agents.Add(new Help_Class.UserAgent(c.UA.ToString(), c.OS.ToString(), c.Device.ToString()));
+                progressBar3.Value += 1;
             }
 
             var res = agents.GroupBy(x => x.Agent);
             foreach (var item in res)
             {
-                textBox5.AppendText($"AGENT : {item.Key.ToUpper()}\r\n");
-                var res2 = item.Select(x => x.Os).Distinct();
-                foreach (var item2 in res2)
+                richTextBox3.AppendText($"AGENT : {item.Key.ToUpper()}\r\n");
+                var tmp = from w in item
+                          group w by w.Os into OsCount
+                          select new { Os = OsCount.Key, Count = OsCount.Count() };
+
+                foreach (var item2 in tmp)
                 {
-                    textBox5.AppendText($"  Os : {item2}\r\n");
+                    richTextBox3.AppendText($"  Os : {item2.Os}     Count: {item2.Count}\r\n");
                 }
+                richTextBox3.AppendText("\r\n");
             }
             xlWorkBook.Close(true, null, null);
             xlApp.Quit();
@@ -54,9 +58,8 @@ namespace Test_App
         {
             uaParser = Parser.GetDefault();
             var c = uaParser.Parse(textBox7.Text);
-            textBox8.AppendText(c.UA + "\r\n");
-            textBox8.AppendText(c.OS + "\r\n");
-            textBox8.AppendText(c.Device + "\r\n");
+            string parse = String.Format($"Agent: {c.UA}    Система: {c.OS}   Устройство: {c.Device}");
+            textBox8.Text = parse;
         }
     }
 }

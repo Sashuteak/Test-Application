@@ -18,9 +18,12 @@ namespace Test_App.Server_Requests
         public ServerManager(TextBox textbox, ProgressBar p)
         {
             Url = "https://arm.frontmanager.com.ua/";
+
+
+
             Auth = "4a8d8d2424514feea04def767ead58b4HlJS3az4Hn1BI5FF5qU2qaBo6ag=";
             this.textbox = textbox;
-            this.pb = p;
+            pb = p;
             list = new List<string>();
             list.Add("GetHall");
             list.Add("GetCities");
