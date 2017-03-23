@@ -5,11 +5,10 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Test_App.Help_Class;
+using Excel = Microsoft.Office.Interop.Excel.Application; // псевдоним для пространства имен
 
 namespace Test_App
 {
@@ -19,7 +18,7 @@ namespace Test_App
         string path1;
         string path2;
 
-        Microsoft.Office.Interop.Excel.Application app;
+        Excel app;
         Workbook xlWorkBook;
         Worksheet xlWorkSheet;
         Range range;
@@ -63,7 +62,7 @@ namespace Test_App
                 richTextBox1.AppendText(item.ToString());
                 System.Windows.Forms.Application.DoEvents();
             }
-            progressBar1.Value = 0;
+            progressBar2.Value = 0;
         }
         private void button10_Click(object sender, EventArgs e)
         {
@@ -76,7 +75,6 @@ namespace Test_App
                 count++;
             }
         }
-
         private void button9_Click(object sender, EventArgs e)
         {
             string path = @"https://arm.frontmanager.com.ua/OrderCardWA?order=";
@@ -84,17 +82,36 @@ namespace Test_App
             MatchCollection matches3;
             List<string> orders = new List<string>();
             result = new List<Result>();
-            foreach (var item in sample)
+
+            if(sample == null)
             {
-                matches3 = regex1.Matches(item.OrderId);
-                if (matches3.Count > 0)
+                foreach (var item in src)
                 {
-                    foreach (Match match in matches3)
+                    matches3 = regex1.Matches(item.OrderId);
+                    if (matches3.Count > 0)
                     {
-                        orders.Add(match.Value);
+                        foreach (Match match in matches3)
+                        {
+                            orders.Add(match.Value);
+                        }
                     }
                 }
             }
+            else
+            {
+                foreach (var item in sample)
+                {
+                    matches3 = regex1.Matches(item.OrderId);
+                    if (matches3.Count > 0)
+                    {
+                        foreach (Match match in matches3)
+                        {
+                            orders.Add(match.Value);
+                        }
+                    }
+                }
+            }
+            
 
             Driver = new ChromeDriver();
             Driver.Manage().Window.Maximize();
@@ -102,7 +119,7 @@ namespace Test_App
             Driver.FindElement(By.Id("inLogin")).SendKeys("a.Levchenko");
             Driver.FindElement(By.Id("inPwd")).SendKeys("Jesus is way");
             Driver.FindElement(By.Id("doLogin")).Click();
-            Driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(60));
+            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
             Driver.FindElement(By.ClassName("username")).Click();
 
 
@@ -163,8 +180,56 @@ namespace Test_App
                 //}              
                 k++;
             }
+            Driver.Quit();
         }
+        private void button12_Click(object sender, EventArgs e)
+        {
+            string path = @"https://arm.frontmanager.com.ua/OrderCardWA?order=";
+            Driver = new ChromeDriver();
+            Driver.Manage().Window.Maximize();
+            Driver.Url = "https://arm.frontmanager.com.ua/";
+            Driver.FindElement(By.Id("inLogin")).SendKeys("a.Levchenko");
+            Driver.FindElement(By.Id("inPwd")).SendKeys("Jesus is way");
+            Driver.FindElement(By.Id("doLogin")).Click();
+            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
+            Driver.FindElement(By.ClassName("username")).Click();
 
+            string buf = richTextBox1.Text;
+            string[] tmp = buf.Split('\n');
+
+            for (int i = 1; i < tmp.Count(); i++)
+            {
+                Driver.Url = path + tmp[i];
+                string status = "";
+                List<IWebElement> RadioButton = Driver.FindElements(By.Name("orderStatus")).ToList();
+                List<IWebElement> Label = Driver.FindElements(By.TagName("label")).ToList();
+                foreach (var item in RadioButton)
+                {
+                    if (item.Selected)
+                    {
+                        IWebElement text = Label.Where(s => s.GetAttribute("for") == item.GetAttribute("id")).SingleOrDefault();
+                        status = text.Text;
+                        break;
+                    }
+                }
+                try
+                {
+                    Driver.FindElement(By.Id("checkPayment")).Click();
+                }
+                catch (Exception)
+                {
+                    continue;
+                }
+                
+                string elem = Driver.FindElement(By.XPath("html/body/ul/li[1]/div/div[1]")).Text;
+                if (elem.Contains("failure") && status == "Оплачен")
+                {
+                    richTextBox2.AppendText("Статус: " + status + "\r\n");
+                    richTextBox2.AppendText(elem + "\r\n\r\n");
+                }
+            }
+            Driver.Quit();
+        }
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
             richTextBox2.Clear();

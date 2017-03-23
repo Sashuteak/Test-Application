@@ -11,6 +11,7 @@ using Test_App.Android.Pages;
 using System.Collections.Generic;
 using Test_App.Karabas.Pages;
 using Test_App.Server_Requests;
+using Excel = Microsoft.Office.Interop.Excel.Application;
 
 namespace Test_App
 {
@@ -47,7 +48,7 @@ namespace Test_App
             button7.Region = Refresh_Region;
 
 
-            app = new Microsoft.Office.Interop.Excel.Application();
+            app = new Excel();
             DirectoryInfo fi = new DirectoryInfo(@"..\..\Excel Files");
             foreach (var item in fi.EnumerateFiles())
             {
@@ -175,8 +176,8 @@ namespace Test_App
                 capp.SetCapability("appPackage", "com.karabas");
 
                 // Для реального девайса
-                //capp.SetCapability("appActivity", "com.karabas.activities.SplashActivity");
-                capp.SetCapability("appActivity", "com.karabas.activities.MainActivity");
+                capp.SetCapability("appActivity", "com.karabas.activities.SplashActivity");
+                //capp.SetCapability("appActivity", "com.karabas.activities.MainActivity");
 
                 capp.SetCapability("platformName", "Android");
                 //capp.SetCapability("unicodeKeyboard", "true");
@@ -193,7 +194,6 @@ namespace Test_App
         {
             Driver.Quit();
         }
-
 
         //Отправление Запроса На Сервер
         private void button2_Click(object sender, EventArgs e)

@@ -15,7 +15,7 @@ namespace Test_App.Android.Tests
         {
             this.textBox = textBox;
             this.driver = dri;
-            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(60));
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
         }
 
         public override void GoTest()
@@ -28,11 +28,11 @@ namespace Test_App.Android.Tests
                 value = filt.CategoriesClick(i);
                 try
                 {
-                    driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
+                    driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
                     driver.FindElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().resourceId(\"com.karabas:id/parent_scroll\")).scrollForward();"));
                 }
                 catch { }
-                driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
                 rp = filt.SubmitClick();
 
                 try
@@ -54,15 +54,14 @@ namespace Test_App.Android.Tests
                 filt.CloseClick();
                 try
                 {
-                    driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
+                    driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
                     driver.FindElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().resourceId(\"com.karabas:id/parent_scroll\")).scrollBackward();"));
                 }
                 catch { }
-                driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(60));
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
                 filt.ClearFilter();
                 textBox.AppendText("\r\n");
             }
-
             filt.CloseClick();
         }
     }

@@ -15,7 +15,7 @@ namespace Test_App.Android.Tests
         {
             this.textBox = textBox;
             this.driver = dri;
-            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(60));
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
         }
 
         public override void GoTest()
@@ -28,7 +28,7 @@ namespace Test_App.Android.Tests
 
             try
             {
-                driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(8));
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
                 driver.FindElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().resourceId(\"com.karabas:id/scrollview\")).flingForward();"));
             }
             catch { }
@@ -55,7 +55,7 @@ namespace Test_App.Android.Tests
             }
             catch (Exception e)
             {
-                textBox.AppendText(e.Message);
+                textBox.AppendText("NO EVENTS");
                 filter.CloseClick();
                 filter.ClearFilter();
                 filter.CloseClick();

@@ -14,7 +14,7 @@ namespace Test_App.Android.Tests
         public Login_Test(AndroidDriver<IWebElement> dri, TextBox textBox) : base(dri, textBox)
         {
             this.driver = dri;
-            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(60));
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
         }
 
         public override void GoTest()
@@ -31,7 +31,7 @@ namespace Test_App.Android.Tests
 
             try
             {
-                driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.Zero);
+                driver.Manage().Timeouts().ImplicitWait = TimeSpan.Zero;
                 driver.FindElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().className(\"android.widget.ScrollView\")).scrollForward();"));
             }
             catch { }

@@ -12,11 +12,11 @@ namespace Test_App.Android.Tests
         public Month_Test(AndroidDriver<IWebElement> dri, TextBox obj) : base(dri, obj)
         {
             this.driver = dri;
-            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(60));
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
         }
         public override void GoTest()
         {
-            for (int i = 1; i < 6; i++)
+            for (int i = 1; i < MonthList.Count; i++)
             {
                 MonthClick(i);
             }

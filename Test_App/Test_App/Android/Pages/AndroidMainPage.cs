@@ -16,7 +16,7 @@ namespace Test_App.Android.Pages
             PageFactory.InitElements(dri, this);
             this.driver = dri;
             textBox = obj;
-            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(60));
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
         }
 
         [FindsBy(How = How.Id, Using = "com.karabas:id/store")]
@@ -59,7 +59,7 @@ namespace Test_App.Android.Pages
         protected IWebElement Events_List;
 
         [FindsBy(How = How.ClassName, Using = "android.widget.TextView")]
-        protected IList<IWebElement> MonthList;
+        public IList<IWebElement> MonthList { get; set; }
 
 
 
